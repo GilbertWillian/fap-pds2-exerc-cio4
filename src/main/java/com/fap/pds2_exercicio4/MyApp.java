@@ -32,6 +32,26 @@ public class MyApp extends Application {
 		MyApp.stage = stage;
     }
 
+	public void componentes() {
+		pane = new AnchorPane();
+		pane.setPrefSize(500, 400);
+		
+		campoUsuario = new TextField();
+		campoUsuario.setPromptText("Usuário...");
+		
+		campoSenha = new PasswordField();
+		campoSenha.setPromptText("Senha...");
+		
+		botaoLogin = new Button("Login");
+		
+		botaoSair = new Button("Sair");
+		
+		pane.getChildren().addAll(campoUsuario, campoSenha);
+		pane.getChildren().addAll(botaoLogin, botaoSair);
+		
+
+	}
+	
     public static void main(String[] args) {
         launch(); 
     }
